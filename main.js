@@ -9,7 +9,7 @@ function init() {
     var count = 0;
     for(var i = 0; i < 8; i++){
         for(var j = 0; j < 8; j++){
-            ctx.fillStyle = count%2==0 ? "black" : "white"; 
+            ctx.fillStyle = count%2==0 ? "white" : "black"; 
             ctx.fillRect(i*cellSize, j*cellSize, cellSize, cellSize);
             count++;
         }
