@@ -66,7 +66,17 @@ function Piece(type, x, y) {
     this.draw = function(color) {
         ctx.fillStyle = color;
         //ctx.fillRect(this.x*cellSize+cel, this.y*cellSize)
-        ctx.fillRect(this.x*cellSize+cellSize/4, this.y*cellSize+cellSize/4, cellSize/2, cellSize/2);
+        ctx.fillRect(this.x*cellSize+cellSize/4, (7-this.y)*cellSize+cellSize/4, cellSize/2, cellSize/2);
+    }
+    this.isMove = function(x,y){
+        if(this.type=="bishop"){
+            var diffX = x-this.x;
+            var diffY = y - this.y;
+            return (Math.abs(diffX)==Math.abs(diffY)&&diffX!=0);
+        }
+        else if(this.type=="knight"){
+            
+        }
     }
 }
 
