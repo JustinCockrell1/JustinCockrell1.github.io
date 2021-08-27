@@ -75,7 +75,27 @@ function Piece(type, x, y) {
             return (Math.abs(diffX)==Math.abs(diffY)&&diffX!=0);
         }
         else if(this.type=="knight"){
-            
+            var diffX = Math.abs(x-this.x);
+            var diffY = Math.abs(y - this.y);
+            return ((diffX==1&&diffY==2)||(diffX==2&&diffY==1));
+        }
+        else if(this.type=="rook") {
+            var diffX = Math.abs(x-this.x);
+            var diffY = Math.abs(y - this.y);
+            return ((diffX!=0&&diffY==0)||(diffX==0&&diffY!=0));
+        }
+        else if(this.type=="queen"){
+            var diffX = Math.abs(x-this.x);
+            var diffY = Math.abs(y - this.y);
+            return (((diffX!=0&&diffY==0)||(diffX==0&&diffY!=0))||(diffX==diffY));
+        }
+        else if(this.type=="pawn"){
+
+        }
+        else if(this.type=="king"){
+            var diffX = Math.abs(x-this.x);
+            var diffY = Math.abs(y - this.y);
+            return (diffX<=1&&diffY<=1);
         }
     }
 }
