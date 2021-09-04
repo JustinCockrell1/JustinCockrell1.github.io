@@ -3,9 +3,15 @@ var ctx;
 var cellSize;
 var whitePieces = [];
 var blackPieces = [];
+
+var pieceSpriteSheet;
 function init() {
     canvas =document.getElementById("canvas");
     ctx = canvas.getContext("2d");
+
+    //Initializing the pieces sprite sheet
+    pieceSpriteSheet = new Image();
+    pieceSpriteSheet.src= "1200px-Chess_Pieces_Sprite.svg.png";
 
     //Initializing events
     canvas.addEventListener("mousedown", handleMouseClick);
@@ -56,6 +62,9 @@ function drawBoard() {
     for(var i = 0; i < blackPieces.length; i++){
         blackPieces[i].draw("blue");
     }
+
+    ctx.drawImage(pieceSpriteSheet, 0,0, 200,200, 0,0, cellSize, cellSize);
+
 }
 
 function Piece(type, x, y) {
@@ -100,7 +109,13 @@ function Piece(type, x, y) {
     }
 }
 
-
+function getPiece(x,y){
+    for(var i = 0; i < whitesPieces[i].length(); i++){
+        if(whitePieces[i].x==x&&whitePieces[i].y==y){
+            return i;
+        }
+    }
+}
 
 function handleMouseClick(event){
     var offsetX = canvas.getBoundingClientRect().left;
