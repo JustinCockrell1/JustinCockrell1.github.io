@@ -63,7 +63,7 @@ function drawBoard() {
         blackPieces[i].draw("blue");
     }
 
-    ctx.drawImage(pieceSpriteSheet, 0,0, 200,200, 0,0, cellSize, cellSize);
+    ctx.drawImage(pieceSpriteSheet, 200,0, 200,200, 0,0, cellSize, cellSize);
 
 }
 
