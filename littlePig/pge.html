@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en-us">
     <head>
+        <title>Little Pig Sim</title>
         <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -19,7 +20,7 @@ canvas.emscripten { border: 0px none; background-color: black; }
     <body class="is-preload">
 
         <header id="header">
-            <a href="index.html" class="title">Justin Cockrell</a>
+            <a href="../index.html" class="title">Justin Cockrell</a>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -44,7 +45,9 @@ canvas.emscripten { border: 0px none; background-color: black; }
                             <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
 
                         </span>
-                        <p>This program uses the actual dimensions of a remote controlled ATV I was working on and simulates how the ATV could travel to a given waypoint.</p>
+                        <p>This program uses the actual dimensions of a remote controlled ATV I was working on and simulates how the ATV could travel to a given waypoint.
+                            Just tap to give it a destination. It has a max turn angle of 15 degrees and if it doesn't think it can make the turn it just won't move
+                        </p>
                         <p>This was made with help from the pixelGameEngine which can be found at OneLoneCoder.com.</p>
                         
                     </div>
