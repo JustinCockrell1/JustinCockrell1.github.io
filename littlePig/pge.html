@@ -22,14 +22,14 @@ canvas.emscripten { border: 0px none; background-color: black; }
             <a href="index.html" class="title">Hyperspace</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="generic.html" class="active">Generic</a></li>
                     <li><a href="elements.html">Elements</a></li>
                 </ul>
             </nav>
         </header>
 
-        <br><br><br><br>
+       
 
         <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
         <script type='text/javascript'>
@@ -69,14 +69,14 @@ Module.canvas.addEventListener("resize", (e) => {
     var left = (e.detail.width - viewWidth) / 2;
 
     // update styles
-    Module.canvas.style.position = "fixed";
+    //Module.canvas.style.position = "fixed";
     Module.canvas.style.top = top.toString() + "px";
     Module.canvas.style.left = left.toString() + "px";
     Module.canvas.style.width = "";
     Module.canvas.style.height = "";
 
     // trigger PGE update
-    Module._olc_PGE_UpdateWindowSize(viewWidth, viewHeight);
+    Module._olc_PGE_UpdateWindowSize(viewWidth/2, viewHeight/2);
 
     // ensure canvas has focus
     Module.canvas.focus();
