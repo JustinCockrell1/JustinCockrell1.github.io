@@ -115,7 +115,7 @@ Module.canvas.addEventListener("resize", (e) => {
     var viewWidth = window.innerWidth;
     var viewHeight = window.innerWidth / Module._olc_WindowAspectRatio;
 
-    if(viewHeight > e.detail.height)
+    if(viewHeight > window.innerHeight)
     {
         viewHeight = window.innerHeight;
         viewWidth = window.innerHeight * Module._olc_WindowAspectRatio;
