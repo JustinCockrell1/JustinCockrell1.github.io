@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="../index.html" class="title">Justin Cockrell</a>
+				<nav>
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="generic.html" class="active">Generic</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">100 days of python</h1>
+							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
+							<h2>Day 7 Hangman</h2>
+							<pre style="width:50%">
+							<code>
+def clearScreen(): 
+print("\n"*10)
+
+lives=5
+guessedLetters = []
+correctlyGuessed = []
+
+print("Welcome to hangman!")
+word = input("Enter word to guess")
+
+gameRunning=True
+
+currentGuess = "_ "*len(word)
+
+while gameRunning:
+clearScreen()
+
+draw = f"""
+____
+| | You have {lives} lives left
+|
+| Guessed letters {str(guessedLetters)}
+|
+| {correctlyGuessed}
+|
+____|____
+
+{currentGuess}
+"""
+
+print(draw)
+letter = input("Guess a letter: ")
+if(letter in word):
+if(letter not in correctlyGuessed):
+correctlyGuessed+=letter
+elif(letter not in guessedLetters):
+guessedLetters+=letter
+lives-=1
+
+currentGuess = ""
+for char in word:
+if char in correctlyGuessed:
+currentGuess+=char+""
+else:
+currentGuess+="_ "
+
+if(currentGuess==word):
+print("Congratulations you won!")
+gameRunning=False
+if(lives==0):
+print("You lost")
+gameRunning=False
+									</code>
+							</pre>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
