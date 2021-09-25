@@ -138,6 +138,11 @@ header.sticky li a {
     cursor: pointer;
 }
 
+.project-list a {
+    border: 1px solid;
+    /* cursor: initial; */
+}
+
 .project-box .tag {
     width: 100%;
     position: absolute;
