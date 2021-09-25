@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Square Level Creator 0.2</title>
+	
+	<link href="style.css" rel="stylesheet">
+</head>
+<body id="body" onload="init()">
+	
+
+
+<center>
+	<span id="coords"></span>&nbsp;&nbsp;&nbsp;<span id="deadly"></span>&nbsp;&nbsp;&nbsp;<span id="dynamic"></span>&nbsp;&nbsp;&nbsp;<span id="oncanvas" hidden=true></span>&nbsp;&nbsp;&nbsp;<span id="selectedElement"></span>
+	<br>
+<table border=1 cellpadding=0 cellspacing=0>
+	<tr>
+		<td width=200 valign="top" align="center">
+		<table>
+			<tr><th>Level Name <br><input type="text" onkeyup="setLevelName()" id="levelNameInput"></th></tr>
+			<tr><th><input type="color" id="color"></th></tr>
+			<tr><th><button onclick="changeDeadly()">Deadly</button></th></tr>
+			<tr><th><button onclick="changeDynamic()">Dynamic</button></th></tr>
+			<tr><th id="directionContainer" hidden=true>Direction: <br><input type="text" id="direction"></th></tr>
+			<tr><th id="distanceContainer" hidden=true>Distance: <br><input type="text" id="distance"</th></tr>
+			<tr><th id="speedContainer"  hidden=true>Speed: <br><input type="text" id="speed"></th></tr>
+			<tr><th><br><button onclick="publishLevel()"><h3>Submit</h3></button></th></tr>
+
+		</table>
+	</td>
+		<td>
+<canvas id="canvas" width=600 height=600 onmousemove="updateCoords()" onkeypress="keyDown()" onmouseleave="setMouseInCanvas(false)" onmouseenter="setMouseInCanvas(true)"></canvas>
+</td>
+
+<td width=200 valign="top" align="left">
+	<table id="elementOptions" width=100% hidden cellpadding=0>
+
+		<tr>
+			<td align="left" width=50%>X</td>
+			<td align="right" width=50%><input id="elementX" type="number" onclick="updateElementPosition()" onkeyup="updateElementPosition()"></td>
+		</tr>
+		<tr>
+			<td>Y</td>
+			<td align="right"><input id="elementY" type="number" onclick="updateElementPosition()" onkeyup="updateElementPosition()">
+			</td>
+		</tr>
+		<tr>
+			<td>Width</td> 
+			<td align="right"><input id="elementWidth" type="number" onclick="updateElementSize()" onkeyup="updateElementSize()"></td>
+		</tr>
+		<tr>
+			<td>Height</td>
+			<td align="right"><input id="elementHeight" type="number" onclick="updateElementSize()" onkeyup="updateElementSize()">
+			</td>
+		</tr>
+		<tr>
+			<td>Color</td>
+			<td align="right"><input type="color" id="elementColor" onchange="updateElementColor()"></td>
+		</tr>
+		<tr>
+			<td>Deadly</td>
+			<td align="right"><button id="elementDeadlyButton" onclick="updateElementDeadly()">False</button></td>
+		</tr>
+		<tr>
+			<td>Dynamic</td>
+			<td align="right"><button id="elementDynamicButton" onclick="updateElementDynamic()">False</button></td>
+		</tr>
+		<td width=100% colspan=2><table id="dynamicOptions" width=100% hidden cellpadding=0>
+		<tr>
+			<td width=50%>Direction</td>
+			<td align="right" width=50%><input type="text" id="elementDirection" onkeyup="updateDynamic()"></td>
+		</tr>
+		<tr>
+			<td>Distance</td>
+			<td align="right"><input type="number" id="elementDistance" onclick="updateDynamic()" onkeyup="updateDynamic()"></td>
+		</tr>
+		<tr>
+			<td>Speed</td>
+			<td align="right"><input type="number" id="elementSpeed" onclick="updateDynamic()" onkeyup="updateDynamic()"></td>
+		</tr>
+</table></td>
+
+	</table>
+</td>
+	</tr>
+	<tr>
+		<td colspan=3 align="left"><div id="output"></div></td>
+	</tr>
+</table>
+
+
+</center>
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>

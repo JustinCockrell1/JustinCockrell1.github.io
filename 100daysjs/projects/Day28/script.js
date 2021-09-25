@@ -1,0 +1,62 @@
+const links = document.querySelectorAll(".nav-list li a");
+
+//This is easy to do in css but this is how to do it in js
+
+for (link of links) {
+    link.addEventListener("click",smoothScroll);
+}
+
+function smoothScroll(e){
+    e.preventDefault();
+    
+    const href = this.getAttribute("href");
+
+    document.querySelector(href).scrollIntoView({
+        behavior:"smooth",
+    });
+}
+
+
+// Sticky Header
+window.addEventListener("scroll",()=>{
+    
+    const header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
+
+
+//Scroll Indicator JS
+
+window.onscroll = () => scrollProgress();
+
+function scrollProgress() {
+    const currentState = document.body.scrollTop || document.documentElement.scrollTop; //Targets safari and chrome
+
+    const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    const scrollPercentage = (currentState/pageHeight) * 100;
+
+    const progressBar = document.querySelector(".progress");
+    
+    progressBar.style.visibility = "visible";
+
+    progressBar.style.width = scrollPercentage + "%";
+
+
+//Newsletter JS
+const newsLetter = document.querySelector(".newsletter");
+
+if(scrollPercentage>80) {
+    newsLetter.style.transform = "translateX(0)";
+}
+else {
+    newsLetter.style.transform = "translateX(-100%)";
+}
+
+document.querySelector(".fa-times").addEventListener("click",()=>{
+    newsLetter.style.transform = "translateX(-100%)";
+})
+}
+
+
+

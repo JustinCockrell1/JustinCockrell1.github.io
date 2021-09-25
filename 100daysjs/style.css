@@ -1,0 +1,38 @@
+ul.day-list {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    max-width: 600px;
+}
+.day-list li {
+    background-color: #777;
+    font-size: 1.8rem;
+    text-decoration: none;
+    list-style: none;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+}
+
+.day-list li:hover {
+    background-color: #555;
+}
+
+.day-list ul a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: auto;
+}
