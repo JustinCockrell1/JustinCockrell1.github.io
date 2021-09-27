@@ -32,14 +32,16 @@ const titles = [
     "Local Storage",
     "Todo App",
     "Notes App",
-    "BMI Calculator"
+    "BMI Calculator",
+    "Calculator",
+    "Digital Clock"
 
 ];
 
 function addListItems() {
     const list = document.querySelector(".day-list");
     for (let i = 0; i<titles.length; i++)
-        list.innerHTML += `<a href="projects/Day${i + 1}/index.html"><li>Day ${i + 1} ${titles[i]}</li></a>`;
+        list.innerHTML += `<a href="projects/Day${i + 1}/index.html"><li>Day ${i + 1} - ${titles[i]}</li></a>`;
 }
 
 addListItems();
