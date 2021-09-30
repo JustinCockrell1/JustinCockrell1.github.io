@@ -119,8 +119,9 @@ header.sticky li a {
     color: black;
     /* padding: 4rem; */
     /* padding-top: 1rem; */
-    background-color: var(--blue);
-    border: 1px rgba(127,127,127,1) solid;
+    background-color: transparent;
+    /* border: 1px rgba(127,127,127,1) solid; */
+    border-bottom: 1px rgba(127,127,127,1) solid;
     border-radius: 1rem 1rem 1rem 1rem;
     margin: 2rem;
      width: 25rem; 
@@ -136,6 +137,7 @@ header.sticky li a {
 }
 .project-box:hover {
     cursor: pointer;
+    border: none;
 }
 
 
@@ -164,6 +166,7 @@ header.sticky li a {
 .project-list .project-box h1 {
     margin-top: 0;
     background-color: white;
+    border: 1px 0px 1px 1px solid black;
 } 
 
 .project-list {

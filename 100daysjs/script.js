@@ -34,7 +34,11 @@ const titles = [
     "Notes App",
     "BMI Calculator",
     "Calculator",
-    "Digital Clock"
+    "Digital Clock",
+    "Weight Converter",
+    "Temperature Converter",
+    "Jumping Game",
+    "Word Count Tool"
 
 ];
 
