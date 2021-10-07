@@ -1,0 +1,161 @@
+:root {
+    --color-primary: #1d4d1c;
+    --color-secondary:#ffd426;
+    --color-green:#075e02;
+    --white:#fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--color-primary);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    color: white;
+    /* width: 1%; */
+    /* margin: auto 1rem; */
+}
+
+.navbar li {
+    margin: 1rem;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.header h1 {
+    padding: 1rem;
+    margin: auto 0;
+    color: var(--color-secondary);
+    text-align: left;
+    font-size: 1.8rem;
+   
+}
+h2 {
+    font-size: 1.7rem;
+    /* background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+hr {
+    size: 10px;
+    font-size: 1.6rem;
+    color: black;
+}
+
+footer img {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+.tournaments {
+    padding: 2rem;
+    /* background-color: var(--color-green); */
+    /* color: white; */
+    font-size: 1.6rem;
+    /* display: flex; */
+    flex-direction: column;
+
+    /* height: 90vh; */
+    justify-content: justify;
+    align-items: center;
+    text-align: center;
+    
+
+    /* align-items: center; */
+}
+
+.tournaments p {
+    text-align: center;
+    margin:1rem;
+}
+
+.tournaments img {
+    width: 200px;
+}
+
+p.special {
+    font-weight: 900;
+    
+}
+
+.hamburger {
+    display: none;
+    z-index: 11;
+}
+.close {
+    display: none;
+    z-index: 11;
+}
+.header {
+    z-index: 11;
+}
+
+@media screen and (max-width: 600px){
+    .navbar {
+        position: fixed;
+        left: 0px;
+        top:0px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: 0;
+        flex-direction: column;
+        transform: translateX(200%);
+        transition: all .3s;
+        width: 50%;
+        height: 100vh;
+        z-index: 3;
+    }
+
+    .navbar li {
+        margin-top: 2rem;
+        font-size: 1.7rem;
+        border-bottom: 1px solid white;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        transform: translateX(-200%);
+        transition: all .3s;
+    }
+
+    .header i {
+        color: var(--white);
+        font-size: 2.4rem;
+        cursor: pointer;
+      }
+
+      .hamburger {
+        position: absolute;
+        right: 1rem;
+        display: block;
+        transform:translateY(0);
+      }
+      .close {
+        position: absolute;
+        right: 1rem;
+        display: block;
+        transform: translateY(-200%);
+        transition: all .3s;
+      }
+}
