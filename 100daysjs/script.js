@@ -38,7 +38,11 @@ const titles = [
     "Weight Converter",
     "Temperature Converter",
     "Jumping Game",
-    "Word Count Tool"
+    "Word Count Tool",
+    "Accordion",
+    "Async Joke Generator",
+    "Modules Importes & Exports",
+    "Github Search"
 
 ];
 
