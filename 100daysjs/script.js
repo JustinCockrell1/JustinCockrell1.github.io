@@ -42,7 +42,8 @@ const titles = [
     "Accordion",
     "Async Joke Generator",
     "Modules Importes & Exports",
-    "Github Search"
+    "Github Search",
+    "Wikipedia Search"
 
 ];
 
