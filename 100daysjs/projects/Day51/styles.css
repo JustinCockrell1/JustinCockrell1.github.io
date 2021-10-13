@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  /* width: 100%; */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start here */
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 2;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+main {
+  background-color: #f4f4f4;
+  padding: 4rem 0;
+}
+
+.slide-container {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.arrow {
+  width: 3rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /*this might be deprecated*/
+}
+
+section::-webkit-scrollbar{
+  height: 5px;
+  width: 2px;
+  border: 1px solid #d5d5d5;
+  background-color: #d5d5d5;
+}
+
+section::-webkit-scrollbar-track{
+  --webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+
+section::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  outline: 1px solid #eee;
+  -webkit-width:5;
+}
+
+section .thumbnail {
+  flex: 0 0 auto;
+  margin: 5px;
+  border: 1px solid var(--black);
+  border-radius: 3px;
+  overflow: hidden;
+  transform: scale(.95);
+  transition: all .3s;
+}
+
+section .thumbnail:hover {
+  transform: scale(1);
+}
+
+.product-details {
+  text-align: center;
+  padding-bottom: 2rem;
+  background-color: var(--white);
+}
+
+.product-details h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.product-details p {
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  color: green;
+  font-weight: 700;
+}
+
+.product-details span {
+  font-weight: normal;
+  text-decoration: line-through;
+  color: red;
+}
+
+.product-details a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: var(--color-sec);
+  color: var(--white);
+  padding: 7px 10px;
+  border-radius: 3px;
+  transition: all .3s;
+}
+
+.product-details a:hover {
+  background-color: var(--color-primary);
+}

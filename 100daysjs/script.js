@@ -43,7 +43,13 @@ const titles = [
     "Async Joke Generator",
     "Modules Importes & Exports",
     "Github Search",
-    "Wikipedia Search"
+    "Wikipedia Search",
+    "",
+    "Image Slider",
+    "Javascript Array Methods",
+    "Data Attribute",
+    "Product Filter",
+    "Carousel Slider"
 
 ];
 
