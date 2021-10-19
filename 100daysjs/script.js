@@ -49,7 +49,14 @@ const titles = [
     "Javascript Array Methods",
     "Data Attribute",
     "Product Filter",
-    "Carousel Slider"
+    "Carousel Slider",
+    "Vertical Tabs",
+    "Count Up App",
+    "Digital Piano",
+    "Form Validation",
+    "Password Visibility Toggle",
+    "Password Strength Indicator",
+    "Animated Login"
 
 ];
 
