@@ -56,7 +56,15 @@ const titles = [
     "Form Validation",
     "Password Visibility Toggle",
     "Password Strength Indicator",
-    "Animated Login"
+    "Animated Login",
+    "Animated Search Bar",
+    "User Avatar Menu",
+    "Currency Converter",
+    "Movie Listing App",
+    "Floating Action Button",
+    "Dark Light Toggle",
+    "Web Speech API",
+    "Web Speech API Commands"
 
 ];
 
