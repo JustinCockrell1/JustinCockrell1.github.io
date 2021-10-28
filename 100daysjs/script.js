@@ -64,7 +64,9 @@ const titles = [
     "Floating Action Button",
     "Dark Light Toggle",
     "Web Speech API",
-    "Web Speech API Commands"
+    "Web Speech API Commands",
+    "Text To Speech",
+    "Type Writing Effect"
 
 ];
 
