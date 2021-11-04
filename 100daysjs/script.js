@@ -66,7 +66,17 @@ const titles = [
     "Web Speech API",
     "Web Speech API Commands",
     "Text To Speech",
-    "Type Writing Effect"
+    "Type Writing Effect",
+    "Custom Progress Bar",
+    "Custom Alert & Toast Notification",
+    "Custom Alert & Progress Bar",
+    "Custom Confirm Dialog",
+    "Custom Range Slider",
+    "Modal With Countdown Event",
+    "Site Preloader",
+    "Testimonial Slider",
+    "Twitter Character Count",
+    "Click to Tweet"
 
 ];
 
