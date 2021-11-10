@@ -76,7 +76,15 @@ const titles = [
     "Site Preloader",
     "Testimonial Slider",
     "Twitter Character Count",
-    "Click to Tweet"
+    "Click to Tweet",
+    "Embed Twitter Timeline",
+    "Recipe App",
+    "Product Gallery With Thumbnail",
+    "Image Gallery Filter",
+    "Credit Card UI/UX",
+    "Exact Age Calculator",
+    "Multi-Step Form",
+    "Pricing Section"
 
 ];
 
