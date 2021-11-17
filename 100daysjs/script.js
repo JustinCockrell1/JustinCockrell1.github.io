@@ -84,7 +84,11 @@ const titles = [
     "Credit Card UI/UX",
     "Exact Age Calculator",
     "Multi-Step Form",
-    "Pricing Section"
+    "Pricing Section",
+    "Stop Watch",
+    "Vertical Timeline",
+    "Music Play App",
+    "Anita Speech AI"
 
 ];
 
